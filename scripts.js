@@ -16,7 +16,7 @@ var check4_value = document.getElementById("Check4");
 var check5_value = document.getElementById("Check5");
 var check6_value = document.getElementById("Check6");
 var btn_save_choice = document.getElementById("btn_save_choice");
-
+var del_choice = document.getElementById("delchoice");
 
 
 function load_text() {
@@ -55,6 +55,15 @@ function del_save_City() {
     localStorage.removeItem('area');
 }
 
+function del_choice_func() {
+    localStorage.removeItem('Check1');
+    localStorage.removeItem('Check2');
+    localStorage.removeItem('Check3');
+    localStorage.removeItem('Check4');
+    localStorage.removeItem('Check5');
+    localStorage.removeItem('Check6');
+}
+
 
 function save_choice() {
 
@@ -64,6 +73,7 @@ function save_choice() {
     localStorage.setItem('Check4', check4_value.checked ? '1' : '0');
     localStorage.setItem('Check5', check5_value.checked ? '1' : '0');
     localStorage.setItem('Check6', check6_value.checked ? '1' : '0');
+    alert('Данные сохранены.');
 
 }
 
